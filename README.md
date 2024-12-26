@@ -16,7 +16,52 @@
 
 <br>
 
-## ⛏ 기술스택
+# ✍ 구현 기능
+
+<b>1. 회원 권한 관련 기능 </b> ( 회원가입/로그인, 정보 수정, 로그아웃/회원탈퇴 )
+
+- Spring MVC 구조를 활용하여 간단한 로직으로 구현. 
+
+- 사용자의 프로필은 GCP를 활용하여 실시간으로 다른 사용자들도 볼 수 있게 하였음.
+
+<p>
+<img src="https://github.com/user-attachments/assets/e9a77a5e-e6aa-47bd-b491-0d637e6455f1">
+</p>
+
+
+<br>
+
+<br>
+
+<b>2. HTP 검사 기능 </b> ( Fast API를 활용한 Yolov5 실시간 연동 기능 )
+
+- FastAPI uvicorn 서버와 Spring Boot Tomcat 서버 통신으로 사용자가 이미지를 업로드하면 yolov5 모델이 받아
+  분석 후 결과를 다시 웹으로 가지고와서 분석하게끔 하였음.
+
+<p>
+<img src="https://github.com/user-attachments/assets/919a2c0b-3093-426b-b6ee-3b92744f3238">
+</p>
+
+
+<br>
+
+<br>
+
+
+<b>3. 동화 생성 프론트 구현 </b>
+
+- jsp기반 페이지로 HTML, CSS, JS 사용하였고 책 효과는 Turn.js v3 사용하여 구현함. 
+
+- 디자인은 유사서비스를 많이 참고하였음.
+
+<p>
+<img src="https://github.com/user-attachments/assets/198daf32-8c76-4a04-bc04-f78666b4932a">
+</p>
+
+<br>
+
+
+# ⛏ 기술스택
 <table>
     <tr>
         <th>구분</th>
@@ -79,26 +124,36 @@
 <br>
 
 
-## ⚙ 시스템 아키텍처
+# ⚙ 시스템 아키텍처
 ![SystemArchitecture](https://github.com/user-attachments/assets/1b540465-0ada-4d25-b425-baca6bad0d58)
 
 <br>
 
-## 📌 서비스 흐름도
+# 📌 서비스 흐름도
 ![UserFlow](https://github.com/user-attachments/assets/d3348034-7e7b-4e6b-9d1f-eea6ee762a1c)
 
 <br>
 
-## 📌 ER다이어그램
+# 📌 ER다이어그램
 ![ERD](https://github.com/user-attachments/assets/512b03c0-361b-43e8-b09d-f672c78eae33)
 
 <br>
 
+# 💣 트러블슈팅
+
+이번 프로젝트는 다른 서버와 통신을 하기 때문에 데이터를 주고 받는 과정에서 문제가 많이 발생하였다. 
+티키타카를 하려면 서로 합의된 데이터 형식이 있어야했다. JSON안에서도 ( 제목: 내용, 좌표값: 내용 )
+이런식으로 되어있는데 Java딴에는 하나라도 다르면 바로 오류가 났었다 ..
+
+이 과정에서 데이터를 어떻게 날릴지 어떻게 받을지 정확하게 정해서 구현하니 생각보다 간단하게 해결할 수 있었다.
+
+앞으로는 이 데이터를 얼마나 안전하게 다룰 것인가를 생각해보아야겠다.
 
 
+<br>
 
 
-## 👨‍👩‍👦‍👦 팀원 역할
+# 👨‍👩‍👦‍👦 팀원 역할
 <table>
   <tr>
     <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
